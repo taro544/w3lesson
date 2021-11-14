@@ -1,0 +1,38 @@
+h1 {
+    color: blueviolet;
+    text-align: left;
+}
+p {
+    color: red;
+    text-align: left;
+}
+/* The CSS id Selector - This is id css */
+#id1 {
+    color: greenyellow;
+    text-align: right;
+}
+/*The CSS class Selector */
+.center {
+    color: indigo;
+    text-align: center;
+}
+/* Only specific elements with Class Selector */
+p.center {
+  text-align: center;
+  color: red;
+}
+p.large {
+  font-size: 300%;
+}
+
+/* Universal selector */
+* {
+  text-align: center;
+  color: black;
+}
+
+/* The CSS Grouping Selector */
+h1, h2, p {
+  text-align: center;
+  color: red;
+}

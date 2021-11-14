@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html dir="auto" lang="en-US">
+
+<head>
+	<!--Meta Section-->
+	<meta charset="utf-8">
+	<meta name="keywords" content="HTML Learning Examples ">
+	<meta name="description" content="Trying html elements in this page ">
+	<meta name="author" content="a.siberoloji.com">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>This is title</title>
+	<link rel="stylesheet" type="text/css" href="css/style1.css">
+
+</head>
+
+<body>
+	<nav>
+		<ul>
+			<li><a href="#home">Home</a></li>
+			<li><a href="#news">News</a></li>
+			<li><a href="#contact">Contact</a></li>
+			<li><a href="#about">About</a></li>
+		</ul>
+	</nav>
+
+	<section>
+		<h1>Merhaba</h1>
+		<p>This <span>is</span> paragraph</p>
+		<h2>This is h2 line.</h2>
+		<em>emphasized text</em>
+		<h3>This is h3 line</h3>
+		<img src="img/team-1.jpg" style="max-width:100%;height:auto;" alt="Team Member John Doe's Picture">
+
+		<picture>
+			<source media="(min-width: 650px)" srcset="img/team-2.jpg" style="max-width:100%;height:auto;">
+			<source media="(min-width: 465px)" srcset="img/team-3.jpg" style="max-width:100%;height:auto;">
+			<img src="img/team-4.jpg" style="max-width:100%;height:auto;" alt="This is Default image">
+		</picture>
+		<hr>
+	</section>
+	<section>
+		<table width="100%">
+			<caption>This is colspan table </caption>
+			<tr>
+				<th>Name</th>
+				<th>Surname</th>
+				<th colspan="2">Phone & Address</th>
+			</tr>
+			<tr>
+				<td>Jone</td>
+				<td>Doe</td>
+				<td>555 223 1213</td>
+				<td>Newyork</td>
+			</tr>
+			<tr>
+				<td>Jane</td>
+				<td>Doe</td>
+				<td>555 224 1213</td>
+				<td>London</td>
+			</tr>
+		</table>
+	</section>
+	<hr>
+	<section>
+		<table id="tb1">
+			<caption>This is rowspan table</caption>
+			<tr>
+				<th>Name</th>
+				<td>Michael</td>
+			</tr>
+			<tr>
+				<th rowspan="2">Phone</th>
+				<td>0555</td>
+			</tr>
+			<tr>
+				<td>0556</td>
+			</tr>
+		</table>
+	</section>
+	<br>
+
+	<hr>
+
+	<ol class="liste" type="1" start="50">
+		<li style="font-size: x-large;">coffee</li>
+		<li>tea</li>
+		<li>milk</li>
+	</ol>
+
+	<!-- This is description list-->
+	<dl>
+
+		<dt>USA</dt>
+		<dd>United States of America</dd>
+		<dt>NASA</dt>
+		<dd>National Aviation Space Agency</dd>
+
+	</dl>
+	<hr>
+	<p><a href="https://siberoloji.com" target="iframe_a">My Website</a></p>
+	<iframe src="header.html" title="This is iframe" name="iframe_a"
+		style="height:auto;width:auto;border: 2px solid red;"></iframe>
+	<br>
+
+	<form action="form_action.php" method="POST" autocomplete="on" name="Form-110">
+		<label for="fname">Name</label><br>
+		<input type="text" name="fname" id="fname"><br>
+		<input type="submit" name="submit" id="submit">
+	</form>
+	<br>
+	<!--Select exapmle-->
+	<form action="form_action.php">
+		<label for="cars">Choose a car:</label><br>
+		<select id="cars" name="cars" multiple>
+			<option value="volvo">Volvo</option>
+			<option value="saab">Saab</option>
+			<option value="fiat">Fiat</option>
+			<option value="audi" selected>Audi</option>
+		</select>
+		<input type="submit">
+	</form>
+	<br>
+	<!--Fieldset & Legend example-->
+	<form action="form_action.php">
+		<fieldset>
+			<legend>Personalia:</legend>
+			<label for="fname2">First name:</label><br>
+			<input type="text" id="fname2" name="fname" value="John"><br>
+			<label for="lname">Last name:</label><br>
+			<input type="text" id="lname" name="lname" value="Doe"><br><br>
+			<input type="submit" value="Submit">
+		</fieldset>
+	</form>
+	<br>
+	<!--Datalist Example-->
+	<form action="form_action.php">
+		<input list="browsers" name="browser">
+		<datalist id="browsers">
+			<option value="Internet Explorer"></option>
+			<option value="Firefox"></option>
+			<option value="Chrome"> </option>
+			<option value="Opera"></option>
+			<option value="Safari"> </option>
+		</datalist>
+		<input type="submit">
+	</form>
+	<br>
+	<!--Reset Button Example-->
+	<form action="form_action.php">
+		<legend>Reset Button Example</legend>
+		<label for="fname">First name:</label><br>
+		<input type="text" id="fname3" name="fname" value="John"><br>
+		<label for="lname">Last name:</label><br>
+		<input type="text" id="lname3" name="lname" value="Doe"><br><br>
+		<input type="submit" value="Submit">
+		<input type="reset">
+	</form>
+	<br>
+	<!--Canvas Example-->
+	<canvas id="canv1" width="200" height="200" style="border: 1px solid black;">Your browser does not support the HTML
+		canvas tag.</canvas>
+
+</body>
+<script>
+	var c = document.getElementById("canv1");
+	var ctx = c.getContext("2d");
+	ctx.moveTo(0, 0);
+	ctx.lineTo(200, 200);
+	ctx.stroke();
+</script>
+<script>
+	var c = document.getElementById("canv1");
+	var ctx = c.getContext("2d");
+	ctx.beginPath();
+	ctx.arc(100, 100, 40, 0, 2 * Math.PI);
+	ctx.stroke();
+</script>
+
+</html>
